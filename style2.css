@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Quicksand&display=swap');
+
+:root
+{
+    --black-main: rgb(14, 14, 14);
+    --red-accents: rgb(122, 39, 39);
+    --red-toned: rgba(75, 22, 22, 0.562);
+    --white-functional: rgb(211, 211, 211);
+}
+
+body
+{
+    margin: 0;
+    background-color: var(--black-main);
+}
+
+.wishes
+{
+    max-width: 60%;
+    /* min-height: 80vh; */
+    height: fit-content;
+    margin: 0 auto;
+
+    /* text-align: justify; */
+    /* position: absolute; */
+    line-height: 3rem;
+
+    background-color: var(--white-functional);
+    color: var(--black-main);
+    font-family: 'Quicksand', sans-serif;
+    padding: 2% 10%;
+    border-radius: 20px;
+
+    box-shadow: inset 0px 0px 200px var(--black-main),
+                0px 0px 400px var(--red-toned);
+}
+
+.wishes h1
+{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--red-accents);
+    text-shadow: 3px 2px 3px var(--red-accents);
+    /* display: block; */
+    /* margin: 0; */
+}
+
+.wishes p
+{
+    /* text-align: center; */
+    font-size: 1.7rem;
+    max-width: 100%;
+}
+
+.wishes .bigLetter
+{
+    font-size: 3rem;
+    color: var(--white-functional);
+    background-color: var(--black-main);
+}
+
+.wishes .continueButton
+{
+  background-color: var(--black-main);
+  color: var(--white-functional);
+  padding: 2% 4%;
+  position: relative;
+  margin: 0 auto;
+  width: 30%;
+  top: 10px;
+  display: block;
+  transition: all 0.5s;
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.wishes .continueButton::before
+{
+  z-index: -1;
+  width: calc(100% - 10px);
+  height: 80%;
+  content: '';
+  position: absolute;
+  top: 33%;
+  left: 3%;
+  background-color: var(--white-functional);
+  transition: all 0.2s;
+  border-radius: 15px;
+}
+
+.wishes .continueButton:hover
+{
+  cursor: pointer;
+  background-color: var(--red-accents);
+}
+
+.wishes .continueButton:hover::before
+{
+  top: 37%;
+  left: -5%;
+  background-color: var(--red-toned);
+  box-shadow: 50px 0px 200px var(--red-accents);
+}

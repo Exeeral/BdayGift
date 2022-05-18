@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
 
 :root
 {
@@ -179,7 +178,6 @@ body
       opacity: 0;
     }
   }
-  
 
 @keyframes textAppear
 {
@@ -251,7 +249,6 @@ body
   font-size: 4rem;
   letter-spacing: 0.1rem;
   color: var(--red-accents);
-  /* background-color: var(--red-accents); */
   text-shadow: 1px 1px 1px var(--white-functional),
                5px 5px 2px var(--red-accents),
                0px 20px 95px var(--white-functional);
