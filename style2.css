@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Quicksand&display=swap');
+@import url('http://fonts.cdnfonts.com/css/whitney');
 
 :root
 {
@@ -16,13 +17,10 @@ body
 
 .wishes
 {
-    max-width: 60%;
-    /* min-height: 80vh; */
+    max-width: 60vw;
     height: fit-content;
     margin: 0 auto;
 
-    /* text-align: justify; */
-    /* position: absolute; */
     line-height: 3rem;
 
     background-color: var(--white-functional);
@@ -35,31 +33,30 @@ body
                 0px 0px 400px var(--red-toned);
 }
 
-.wishes h1
+h1
 {
     text-align: center;
     font-size: 4rem;
     color: var(--red-accents);
-    text-shadow: 3px 2px 3px var(--red-accents);
-    /* display: block; */
-    /* margin: 0; */
+    text-shadow: 0px 0px 10px var(--red-accents),
+                 0px 0px 40px var(--red-accents),
+                 0px 0px 2px var(--white-functional);
 }
 
-.wishes p
+p
 {
-    /* text-align: center; */
-    font-size: 1.7rem;
-    max-width: 100%;
+    font-size: 1.5rem;
+    max-width: 100vw;
 }
 
-.wishes .bigLetter
+.bigLetter
 {
     font-size: 3rem;
     color: var(--white-functional);
     background-color: var(--black-main);
 }
 
-.wishes .continueButton
+.continueButton
 {
   background-color: var(--black-main);
   color: var(--white-functional);
@@ -74,9 +71,10 @@ body
   border-radius: 10px;
   text-align: center;
   font-size: 2em;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.wishes .continueButton::before
+.continueButton::before
 {
   z-index: -1;
   width: calc(100% - 10px);
@@ -90,16 +88,104 @@ body
   border-radius: 15px;
 }
 
-.wishes .continueButton:hover
+.continueButton:hover
 {
   cursor: pointer;
   background-color: var(--red-accents);
 }
 
-.wishes .continueButton:hover::before
+.continueButton:hover::before
 {
   top: 37%;
   left: -5%;
   background-color: var(--red-toned);
   box-shadow: 50px 0px 200px var(--red-accents);
+}
+
+.memories
+{
+  max-width: 80vw;
+  margin: 0 auto;
+  background-color: var(--black-main);
+  padding: 3%;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: var(--white-functional);
+  vertical-align: middle;
+}
+
+.timeMachine
+{
+  margin-top: 30%;
+  padding-bottom: 30%;
+  min-height: fit-content;
+}
+
+.description
+{
+  width: 50vw;
+  font-size: 3em;
+  text-align: left;
+}
+
+.quote
+{
+  background-color: rgba(54,57,63,255);
+  color: rgba(224,239,239,255);
+  font-family: 'Whitney', sans-serif !important;
+  width: 20vw;
+  font-size: 15px;
+  text-align: left;
+  padding: 3%;
+}
+
+.left
+{
+  float: left;
+}
+
+.right
+{
+  float: right;
+}
+
+.center
+{
+  clear: both;
+  text-align: center;
+  display: block;
+  padding-top: 10%;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.separation
+{
+  padding-bottom: 30%;
+  clear: both;
+}
+
+.timeMachine img
+{
+  max-width: 100%;
+}
+
+#kimiVideo
+{
+  transition: opacity 1s ease-in;
+  min-width: 100%;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1300px) 
+{
+
+  #kimiVideo
+  {
+    max-width: 30%;
+  }
+
 }
