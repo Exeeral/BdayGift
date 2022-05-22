@@ -9,13 +9,6 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> -->
     
     <script>
-        window.location.replace("#");
-
-        if (typeof window.history.replaceState == 'function') 
-        {
-            history.replaceState({}, '', window.location.href.slice(0, -1));
-        }
-
         if ('scrollRestoration' in history) 
         {
             history.scrollRestoration = 'manual';

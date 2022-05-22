@@ -8,15 +8,10 @@
         <title>Happy Birthday!</title>
         <link rel="stylesheet" href="./style2.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
         
         <script>
-            window.location.replace("#");
-    
-            if (typeof window.history.replaceState == 'function') 
-            {
-                history.replaceState({}, '', window.location.href.slice(0, -1));
-            }
-    
             if ('scrollRestoration' in history) 
             {
                 history.scrollRestoration = 'manual';
@@ -24,10 +19,78 @@
     
             window.scrollTo(0);
         </script>
+
+        <script>
+            $(document).ready(function(){
+                const container = $(".furtuneTelling");
+
+                container.load('fortuneTellingHall.html');
+
+                $("button").click(function(){
+                    switch(parseInt(this.id))
+                    {
+                        case 1:
+                        {
+                            container.load('fortuneTellingHall.html');
+                            break;
+                        }
+
+                        case 2:
+                        {
+                            container.load('fortuneOurselves.html');
+                            $(".futureVideo").attr("src", "./videos/firework1.mp4");
+                            break;
+                        }
+                    }
+                });
+            });
+        </script>
     
     </head>
 </head>
 <body>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init
+        (
+            {
+                offset: 300,
+                delay: 2000,
+                duration: 1000,
+                once: false,
+                anchorPlacement: 'top-bottom'
+            }
+        );
+    </script>
+
+    <nav>
+        <button id="1">Fortune Telling Hall</button>
+        <button id="2">Ourselves</button>
+        <button id="3">Friendship</button>
+        <button id="4">Ending</button>
+    </nav>
+
+    <div class="future">
+        <div data-aos="fade-up" class="furtuneTelling">
+            <h1>Welcome to my fortune telling booth</h1> 
+            
+            <p>
+                I am Exeeral's fake Alter Ego. I'm a fortune teller. You can't see me now, as I'm behind
+                the visible wall. I will be communicating with you via the
+                text you'll be reading on screen. I will tell you your fortune with my fortune telling skills,
+                using my crystal ball.
+                Fortunately, the fortunes of you and my real self seem to be very fortunate.
+                I see a bright future awaiting the both of you. Stick with me and let me
+                suck you into some fantasy world you all will be living in.<br><br>
+
+                Choose one of the topics above and I'll work my magic to foresee your future. The first button
+                will lead you back here.
+            </p>
+        </div>
+
+        <video src="./videos/crystalBall.mp4" class="futureVideo" muted autoplay loop></video>
+    </div>
+
+
 </body>
 </html>

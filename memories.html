@@ -8,14 +8,7 @@
         <link rel="stylesheet" href="./style2.css">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
         
-        <script>
-            window.location.replace("#");
-    
-            if (typeof window.history.replaceState == 'function') 
-            {
-                history.replaceState({}, '', window.location.href.slice(0, -1));
-            }
-    
+        <script>   
             if ('scrollRestoration' in history) 
             {
                 history.scrollRestoration = 'manual';
@@ -570,36 +563,7 @@
 
             <video src="./videos/kimi.mp4" id="kimiVideo" muted></video>
 
-            <script>
-                function callback(entry)
-                {
-                    entry[0].target.play();
-                    ++counter;
-                }
-
-                const gif = document.getElementById('kimiVideo');
-                const observer = new IntersectionObserver(callback);
-                observer.observe(gif);
-
-                let counter = 0;
-                let video = document.getElementById('kimiVideo');
-                video.addEventListener('ended', myHandler, false);
-
-                function myHandler(Vid)
-                {
-                    if(counter > 1)
-                    {
-                        video.play();
-                        ++counter;
-                    }
-
-                    if(counter == 4)
-                    {
-                        video.style.opacity = "0.2";
-                        return;
-                    }
-                }
-            </script>
+            <script src="./scripts/videoLoop.js"></script>
 
             <span data-aos="fade-up" data-aos-delay="3000" data-aos-once="true" class="center description">
                 The movies we watched! We started with The Silent Voice, and then went with
@@ -684,14 +648,7 @@
         <a href="future.html" class="continueButton" 
         style="margin-top: 10%; margin-bottom: 10%;">Commence forth</a>
 
-        <script>
-            let vidElem = document.getElementsByTagName("video");
-
-            for(let i = 0; i < vidElem.length; i++)
-            {
-                vidElem[i].volume = 0.1;
-            };
-        </script>
+        <script src="./scripts/videoSilencer.js"></script>
         
     </body>
 </html>
