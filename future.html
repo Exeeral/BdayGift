@@ -26,22 +26,37 @@
 
                 container.load('fortuneTellingHall.html');
 
+                let fileToLoad = " ";
+
                 $("button").click(function(){
                     switch(parseInt(this.id))
                     {
                         case 1:
                         {
-                            container.load('fortuneTellingHall.html');
+                            fileToLoad = "fortuneTellingHall.html";
                             $(".futureVideo").attr("src", "./videos/crystalBall.mp4");
+                            container.children('p').css("color", "var(--white-functional)");
+
                             break;
                         }
 
                         case 2:
                         {
-                            container.load('fortuneOurselves.html');
+                            fileToLoad = "fortuneOurselves.html";
                             $(".futureVideo").attr("src", "./videos/ourFuture.mp4");
+                            $(".futureVideo").addClass("ourFuturesVideo");
+                            container.children("p").addClass("lightShadowed");
+
                             break;
                         }
+                    }
+
+                    container.load(`${fileToLoad}`);
+
+                    if(container.hasClass("fortuneContent"))
+                    {
+                        $(".fortuneContent").text(container.children(".fortuneContent").text());
+                        container.remove(".fortuneContent");
                     }
                 });
             });
@@ -72,7 +87,7 @@
     </nav>
 
     <div class="future">
-        <div data-aos="fade-up" class="furtuneTelling">
+        <div class="furtuneTelling">
             <h1>Welcome to my fortune telling booth</h1> 
             
             <p>
@@ -88,10 +103,12 @@
                 will lead you back here.
             </p>
         </div>
-
+        
         <video src="./videos/crystalBall.mp4" class="futureVideo" muted autoplay loop></video>
     </div>
 
-
+    <div class="fortuneContent">
+        <span class="center description">123</span>
+    </div>
 </body>
 </html>
