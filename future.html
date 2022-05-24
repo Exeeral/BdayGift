@@ -28,12 +28,12 @@
                 let fileToLoad = " ";
 
                 $("button").click(function(){
-                    $(".futureVideo").removeClass().addClass("futureVideo");
+                    $(".futureBackground").removeClass().addClass("futureBackground");
                     container.children("p").removeClass();
 
-                    if($(".futureVideo").is("img"))
+                    if($(".futureBackground").is("img"))
                     {
-                        $(".futureVideo").replaceWith("<video class='futureVideo' autoplay loop>");
+                        $(".futureBackground").replaceWith("<video class='futureBackground' autoplay loop>");
                     }
 
                     switch(parseInt(this.id))
@@ -41,7 +41,7 @@
                         case 1:
                         {
                             fileToLoad = "fortuneTellingHall.html";
-                            $(".futureVideo").attr("src", "./videos/crystalBall.mp4");
+                            $(".futureBackground").attr("src", "./videos/crystalBall.mp4");
 
                             break;
                         }
@@ -49,8 +49,8 @@
                         case 2:
                         {
                             fileToLoad = "fortuneOurselves.html";
-                            $(".futureVideo").attr("src", "./videos/ourFuture.mp4");
-                            $(".futureVideo").addClass("darkenedVideo");
+                            $(".futureBackground").attr("src", "./videos/ourFuture.mp4");
+                            $(".futureBackground").addClass("darkenedVideo");
 
                             break;
                         }
@@ -58,8 +58,7 @@
                         case 3:
                         {
                             fileToLoad = "fortuneFriendship.html";
-                            $(".futureVideo").addClass("darkenedVideo");
-                            $(".futureVideo").replaceWith("<img src='./Images/drawing.jpg' class='futureVideo'>");
+                            $(".futureBackground").replaceWith("<img src='./Images/drawing.jpg' class='futureVideo'>");
 
                             break;
                         }
@@ -127,7 +126,7 @@
             </p>
         </div>
         
-        <video src="./videos/crystalBall.mp4" class="futureVideo" muted autoplay loop></video>
+        <video src="./videos/crystalBall.mp4" class="futureBackground" muted autoplay loop></video>
     </div>
 
     <div class="fortuneContent">
