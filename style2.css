@@ -290,10 +290,16 @@ nav button:hover
 .darkFont
 {
   color: var(--black-main);
-  text-shadow: 0px 0px 5px var(--black-main),
-               0px 0px 10px var(--black-main),
-               0px 0px 20px var(--black-main);
+  text-shadow: 0px 0px 2px var(--black-main),
+               0px 0px 5px var(--black-main);
 }
+
+.short
+{
+  width: 30%;
+  overflow: hidden;
+}
+
 
 .darkenedVideo
 {

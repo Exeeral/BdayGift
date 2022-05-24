@@ -30,6 +30,7 @@
                 $("button").click(function(){
                     $(".futureBackground").removeClass().addClass("futureBackground");
                     container.children("p").removeClass();
+                    $("button").removeClass();
 
                     if($(".futureBackground").is("img"))
                     {
@@ -59,6 +60,7 @@
                         {
                             fileToLoad = "fortuneFriendship.html";
                             $(".futureBackground").replaceWith("<img src='./Images/drawing.jpg' class='futureBackground'>");
+                            $("button").addClass("darkFont");
 
                             break;
                         }
