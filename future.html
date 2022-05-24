@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-        
         <script>
             if ('scrollRestoration' in history) 
             {
@@ -48,11 +47,18 @@
                         {
                             fileToLoad = "fortuneOurselves.html";
                             $(".futureVideo").attr("src", "./videos/ourFuture.mp4");
-                            $(".futureVideo").addClass("ourFuturesVideo");
+                            $(".futureVideo").addClass("darkenedVideo");
 
                             container.children("p").addClass("lightShadowed");
 
                             break;
+                        }
+
+                        case 3:
+                        {
+                            fileToLoad = "fortuneFriendship.html";
+                            $(".futureVideo").attr("src", "./videos/");
+                            $(".futureVideo").addClass("darkenedVideo");
                         }
                     }
 
@@ -94,7 +100,7 @@
 
     <nav>
         <button id="1">Fortune Telling Hall</button>
-        <button id="2">Ourselves</button>
+        <button id="2">Yourselves</button>
         <button id="3">Friendship</button>
         <button id="4">Ending</button>
     </nav>
