@@ -279,10 +279,15 @@ nav button:hover
 .lightShadowed
 {
   color: var(--white-functional);
-  text-shadow: 0px 0px 3px var(--black-main);
+  font-weight: bold;
+  text-shadow: 0px 0px 3px var(--white-functional),
+               0px 0px 5px var(--black-main),
+               0px 0px 10px var(--black-main),
+               0px 0px 20px var(--black-main);
+               
 }
 
 .ourFuturesVideo
 {
-  filter: blur(2px) brightness(50%);
+  filter: blur(2px) brightness(90%);
 }
