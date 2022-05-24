@@ -29,7 +29,7 @@
 
                 $("button").click(function(){
                     $(".futureVideo").removeClass().addClass("futureVideo");
-                    // container.children("p").removeClass();
+                    container.children("p").removeClass();
 
                     if($(".futureVideo").is("img"))
                     {
@@ -43,8 +43,6 @@
                             fileToLoad = "fortuneTellingHall.html";
                             $(".futureVideo").attr("src", "./videos/crystalBall.mp4");
 
-                            container.children("p").css("color", "var(--white-functional)");
-
                             break;
                         }
 
@@ -53,8 +51,6 @@
                             fileToLoad = "fortuneOurselves.html";
                             $(".futureVideo").attr("src", "./videos/ourFuture.mp4");
                             $(".futureVideo").addClass("darkenedVideo");
-
-                            container.children("p").addClass("lightShadowed");
 
                             break;
                         }
