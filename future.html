@@ -31,6 +31,11 @@
                     $(".futureVideo").removeClass().addClass("futureVideo");
                     container.children("p").removeClass();
 
+                    if($(".futureVideo").is("img"))
+                    {
+                        $(".futureVideo").replaceWith("<video class='futureVideo' autoplay>");
+                    }
+
                     switch(parseInt(this.id))
                     {
                         case 1:
@@ -57,8 +62,9 @@
                         case 3:
                         {
                             fileToLoad = "fortuneFriendship.html";
-                            $(".futureVideo").attr("src", "./videos/");
+                            // $(".futureVideo").attr("src", "./videos/");
                             $(".futureVideo").addClass("darkenedVideo");
+                            $(".futureVideo").replaceWith("<img src='./Images/drawing.jpg' class='futureVideo'>");
                         }
                     }
 
