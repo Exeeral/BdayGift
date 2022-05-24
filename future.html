@@ -29,7 +29,7 @@
 
                 $("button").click(function(){
                     $(".futureVideo").removeClass().addClass("futureVideo");
-                    container.children("p").removeClass();
+                    // container.children("p").removeClass();
 
                     if($(".futureVideo").is("img"))
                     {
@@ -64,6 +64,8 @@
                             fileToLoad = "fortuneFriendship.html";
                             $(".futureVideo").addClass("darkenedVideo");
                             $(".futureVideo").replaceWith("<img src='./Images/drawing.jpg' class='futureVideo'>");
+
+                            break;
                         }
                     }
 
