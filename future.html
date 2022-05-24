@@ -35,6 +35,7 @@
                         {
                             fileToLoad = "fortuneTellingHall.html";
                             $(".futureVideo").attr("src", "./videos/crystalBall.mp4");
+
                             container.children('p').css("color", "var(--white-functional)");
 
                             break;
@@ -45,20 +46,28 @@
                             fileToLoad = "fortuneOurselves.html";
                             $(".futureVideo").attr("src", "./videos/ourFuture.mp4");
                             $(".futureVideo").addClass("ourFuturesVideo");
+
                             container.children("p").addClass("lightShadowed");
 
                             break;
                         }
                     }
 
-                    container.load(`${fileToLoad}`);
+                    container.load(`${fileToLoad}`, function(){
+                        let fortuneContent = container.find(".fortuneContent");
 
-                    if(container.hasClass("fortuneContent"))
-                    {
-                        console.log("IT HAS CONTETN!!!!");
-                        $(".fortuneContent").text(container.children(".fortuneContent").text());
-                        container.remove(".fortuneContent");
-                    }
+                        if(fortuneContent.length !== 0)
+                        {
+                            $(".fortuneContent").css("display", "block").html(fortuneContent.html());
+                            container.find(".fortuneContent").remove();
+
+                            delete fortuneContent;
+                        }
+                        else
+                        {
+                            $(".fortuneContent").css("display", "none");
+                        }
+                    });
                 });
             });
         </script>
@@ -88,7 +97,7 @@
     </nav>
 
     <div class="future">
-        <div class="furtuneTelling">
+        <div data-aos="fade-up" class="furtuneTelling">
             <h1>Welcome to my fortune telling booth</h1> 
             
             <p>
@@ -109,7 +118,6 @@
     </div>
 
     <div class="fortuneContent">
-        <span class="center description">123</span>
     </div>
 </body>
 </html>
