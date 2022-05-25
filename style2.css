@@ -311,4 +311,6 @@ nav button:hover
 .looneyTunesFont
 {
   font-family: 'Grand Hotel', 'cursive';
+  color: rgba(251,255,255,255);
+  text-shadow: 0px 0px 50px var(--black-main);
 }
