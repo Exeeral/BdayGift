@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Quicksand&display=swap');
 @import url('http://fonts.cdnfonts.com/css/whitney');
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel|Vibur');
 
 :root
 {
@@ -305,4 +306,9 @@ nav button:hover
 .darkenedVideo
 {
   filter: blur(2px) brightness(90%);
+}
+
+.looneyTunesFont
+{
+  font-family: 'Grand Hotel', 'cursive';
 }
